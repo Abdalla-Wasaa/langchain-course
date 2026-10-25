@@ -9,6 +9,7 @@ dependencies = [
     "isort>=9.0.2",
     "langchain>=1.4.7",
     "langchain-ollama>=1.1.0",
+    "langchain-openai>=1.7.2",
     "langchain-openrouter>=0.2.9",
     "python-dotenv>=1.2.4",
 ]
@@ -19,3 +20,10 @@ agents-under-the-hood = "agents_under_the_hood:main"
 [build-system]
 requires = ["uv_build>=0.13.5,<0.14.0"]
 build-backend = "uv_build"
+
+[tool.black]
+line-length = 88
+target-version = ["py312"]
+
+[tool.isort]
+profile = "black"
